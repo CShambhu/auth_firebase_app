@@ -1,4 +1,5 @@
 import 'package:auth_firebase_app/firebase_options.dart';
+import 'package:auth_firebase_app/screens/auth_gate.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: Scaffold(body: Center(child: Text('Flutter Firebase Demo Page'))),
+      home: const AuthGate(),
     );
   }
 }
